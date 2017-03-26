@@ -29,7 +29,7 @@ def execute():
 		fl = [line.strip() for line in open(plugindir+osslash+help[i], 'r')]       #Load the content into a string
 		if ".pyc" in help[i] or "__init__" in help[i]:			           #If .pyc or __init__ in filename
 			del help[i]							   #Delete it from plugins list
-		elif any("indexme = "+"False" in x for x in fl):			   #Check if it contains indexme = False
+		elif any("indexme = "+"False" in x for x in fl):			   #Check if it contains indexme equals False
 			del help[i]							   #If yes delete if from plugins list
 		else:
 			help[i] = help[i].replace(".py","")			           #Replace extension
