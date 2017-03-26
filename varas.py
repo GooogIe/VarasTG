@@ -22,7 +22,7 @@ def main():
         version = configs["Version"]
         debug = configs["Debug"]
         token = configs["Token"]
-        myBot = bot.Bot(token,name,version,debug)
+        varas = bot.Bot(token,name,version,debug)
     else:										#Otherwise ask for a new token
     	utils.logaction("Type the bot Token: ")
     	token = raw_input("")
