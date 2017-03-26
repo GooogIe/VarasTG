@@ -70,7 +70,7 @@ class Bot:
         utils.logaction("Saving settings to file...")
         try:
             utils.savefile("config.vrs",self.config)
-            utils.action("Saved succesfully to config.vrs")
+            utils.action("Saved successfully to config.vrs")
         except:
             utils.alert("Failed saving settings.")
     
@@ -120,6 +120,13 @@ class Bot:
 
     #Load the plugins to a list
     def loadPlugins(self):
+	if not os.path.isdir(self.plugindir):
+		utils.alert("Plugins directory doesn't exists, attempting to create it.")
+		try:
+			utils.logaction("Plugins directory created successfully!")
+			os.mkdir(osslash+"plugins)
+		except:
+			utils.errorquit("Couldn't create plugins directory...quitting.")
     	for f in listdir(self.plugindir):                       #For everything in the plugins dir
     		if isfile(join(self.plugindir, f)):                 #If it's a file
     			if(f!="__init__.py" and ".pyc" not in f):       #Make sure it's not inity.py and not a bytecode files
