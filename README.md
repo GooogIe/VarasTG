@@ -5,7 +5,7 @@ Varas Bot rewritten to suit for the Telegram Messaging Platform
 
 #### Varas is a simple Telegram bot with a plugin system written in Python.
 
-<p align="center"><img src="http://i.imgur.com/jvQrRAK.png" /></p><br>
+<p align="center"><img src="http://imgur.com/sMrgjaXl.png" /></p><br>
 
 # Running Varas on Linux
 
@@ -42,6 +42,12 @@ def execute(one,two,three,four):
   return one+two+three+four
   #This will make the bot send 'the sum of the 4 parameters in the chat you've typed the command
 ```
+
+* You can even use this:
+```python
+indexme = False
+```
+* To avoid the file being parsed by the pluginloader
 
 * For further examples look at the help.py plugin and exampleplugin.py [here](https://github.com/GooogIe/Varas/tree/master/Plugins)
 
