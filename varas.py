@@ -26,12 +26,12 @@ def main():
     else:										#Otherwise ask for a new token
     	utils.logaction("Type the bot Token: ")
     	token = raw_input("")
-    	myBot = bot.Bot(token)
+    	varas = bot.Bot(token)
         
     utils.info()
-    myBot.saveConfig()
-    myBot.loadPlugins()
-    myBot.getUpdates()
+    varas.saveConfig()
+    varas.loadPlugins()
+    varas.getUpdates()
     
 if __name__ == "__main__":
 	main()
