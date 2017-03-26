@@ -124,7 +124,7 @@ class Bot:
 		utils.alert("Plugins directory doesn't exists, attempting to create it.")
 		try:
 			utils.logaction("Plugins directory created successfully!")
-			os.mkdir(osslash+"plugins)
+			os.mkdir(os.getcwd()+osslash+"plugins")
 		except:
 			utils.errorquit("Couldn't create plugins directory...quitting.")
     	for f in listdir(self.plugindir):                       #For everything in the plugins dir
