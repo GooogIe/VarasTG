@@ -5,7 +5,7 @@ Varas Bot rewritten to suit for the Telegram Messaging Platform
 
 #### Varas is a simple Telegram bot with a plugin system written in Python.
 
-<p align="center"><img src="http://imgur.com/sMrgjaXl.png" /></p><br>
+<p align="center"><img src="http://i.imgur.com/hHnN8Sv.png" /></p><br>
 
 # Running Varas on Linux
 
