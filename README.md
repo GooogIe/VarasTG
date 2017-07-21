@@ -26,30 +26,34 @@ Varas Bot rewritten to suit for the Telegram Messaging Platform
 
 * First step move to the /plugins directory.
 * Create a new file whose extension will be .py
-* Open it and define a description:
+* If you will skip ANY of these steps your plugin won't work
+
+* Open it and import the plugin structure by typing:
 ```python
-desc = "The description of the plugin."
+from plugin import Plugin
 ```
-* Once you're done with the description create the execution function:
+* Now define a name for the plugin:
 ```python
-def execute():
-  return "Hello World."
-  #This will make the bot send 'Hello World.' on the chat you've typed the command.
+name = "PluginName"
 ```
-* You can also pass up to 4 parameters to the function:
+* Create a class and name it as you prefer(usually the plugin name will fit):
 ```python
-def execute(one,two,three,four):
-  return one+two+three+four
-  #This will make the bot send 'the sum of the 4 parameters in the chat you've typed the command
+class PluginName(Plugin):
+```
+* Define the init method, and initialize your plugin here:
+```python
+    def __init__(self):
+        Plugin.__init__(self,"PluginName","Description","Author",1.0)
+```
+* Finally define the run function which is the one executed when the plugin is ran:
+```python
+    def run(self):
+      return "Hello this is my first plugin!"
 ```
 
-* You can even use this:
-```python
-indexme = False
-```
-* To avoid the file being parsed by the pluginloader
+* Use the "self.chat" and "self.user" dictionaries to access user's and chat infos, look at the chat plugin for more.
 
-* For further examples look at the help.py plugin and exampleplugin.py [here](https://github.com/GooogIe/Varas/tree/master/Plugins)
+* For further examples look at the help.py plugin and the others [here](https://github.com/GooogIe/Varas/tree/master/Plugins)
 
 ***
 # More #
@@ -59,6 +63,4 @@ indexme = False
 * Neon/Loled
 
 ### You can find me on:
-
-* [Holeboards](http://www.holeboards.eu/User-u0qq%C9%90H)
 * [Telegram](http://www.telegram.me/elgoog)
