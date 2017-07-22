@@ -5,7 +5,7 @@ Varas Bot rewritten to suit for the Telegram Messaging Platform
 
 #### Varas is a simple Telegram bot with a plugin system written in Python.
 
-<p align="center"><img src="http://i.imgur.com/hHnN8Sv.png" /></p><br>
+<p align="center"><img src="http://i.imgur.com/eC11ZSe.png" /></p><br>
 
 # Running Varas on Linux
 
@@ -36,7 +36,9 @@ from plugin import Plugin
 ```python
 name = "PluginName"
 ```
-* Create a class and name it as you prefer(usually the plugin name will fit):
+IMPORTANT: the name MUST be the Class name
+
+* Create a class and name it as you named the variable 'name':
 ```python
 class PluginName(Plugin):
 ```
