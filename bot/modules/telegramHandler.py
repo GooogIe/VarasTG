@@ -61,7 +61,7 @@ class Telegram():
 			self.update_id = self.update["update_id"]
 			self.msgProcessed(self.update_id)
 		except:
-			utils.action("Looks like there are no updates to remove :P")
+			logger.action("Looks like there are no updates to remove :P")
 			pass
 			
 	#Add the latest update to the processed ones
@@ -85,11 +85,11 @@ class Telegram():
 				self.first_name = self.update["message"]["from"]["first_name"]
 				self.chat_id = self.update["message"]["chat"]["id"]
 				self.text = self.update["message"]["text"]
-				self.date = self.update["message"]["date"]
+				self.date = time.strftime("%B %d %Y", self.update["message"]["date"])
 				up = True
 			except:
 				if up:
-					utils.alert("No updates found.")
+					logger.alert("No updates found.")
 					time.sleep(5)
 					up = False
 			if(self.newUpdate()):                   #If there is a new update(new message)
