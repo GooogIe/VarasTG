@@ -54,7 +54,7 @@ class PluginName(Plugin):
 ```
 
 * Use the "self.chat" and "self.user" dictionaries to access user's and chat infos, look at the chat plugin for more.
-
+* Use the "self.telegram" object to interact directly with telegram, for example you can use it to send messages during the execution of the plugin, or even sending files and so on..
 * For further examples look at the help.py plugin and the others [here](https://github.com/GooogIe/VarasTG/tree/master/plugins)
 
 ***
