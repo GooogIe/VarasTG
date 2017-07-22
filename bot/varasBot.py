@@ -93,12 +93,12 @@ class Bot:
 	#Other methods
 	def info(self):
 		logger.pinfo(logger.red+" __      __                 ")
-		logger.pinfo(" \ \    / /                 ")
-		logger.pinfo("  \ \  / /_ _ _ __ __ _ ___ ")
-		logger.pinfo("   \ \/ / _` | '__/ _` / __|")
-		logger.pinfo('    \  / (_| | | | (_| \__ \ ')
-		logger.pinfo("     \/ \__,_|_|  \__,_|___/4TG")
-		logger.pinfo( ""+logger.defcol)
+		logger.pinfo(logger.red+" \ \    / /                 ")
+		logger.pinfo(logger.red+"  \ \  / /_ _ _ __ __ _ ___ ")
+		logger.pinfo(logger.red+"   \ \/ / _` | '__/ _` / __|")
+		logger.pinfo(logger.red+'    \  / (_| | | | (_| \__ \ ')
+		logger.pinfo(logger.red+"     \/ \__,_|_|  \__,_|___/4TG")
+		logger.pinfo(logger.red+ ""+logger.defcol)
 		logger.pinfo(logger.red+"Varas Telegram Bot.")
 		logger.pinfo("Coded by "+logger.blue+"Neon "+logger.defcol+"and "+logger.yellow+"A Sad Loners.")
 		logger.pinfo("Using "+logger.green+"Python"+logger.defcol+" 2.7.10.")
@@ -181,7 +181,7 @@ class Bot:
 		if "@" in command:
 			command = command.split("@")
 			command = command[0]
-			logger.action("User "+str(self.telegramHandler.user_id)+"("+self.telegramHandler.username+")"+" performed "+command+" at "+self.telegramHandler.date)
+		logger.action("User "+str(self.telegramHandler.user_id)+"("+self.telegramHandler.username+")"+" performed "+command+" at "+self.telegramHandler.date)
 		if self.pluginHandler.isAPlugin(command):            					#If the first element of the list is in the list of pluginf
 			self.telegramHandler.sendMessage(self.pluginHandler.runPlugin(cmd,self.telegramHandler.getChat(),self.telegramHandler.getUser(),self.telegramHandler))     		#Call callPlugin method and send try the result
 		else:                                               					#If the command isn't in the plugins list
