@@ -208,25 +208,25 @@ class Bot:
 		self.removeLastUpdate()	# On startup remove last update which hasn't been parsed or the bot will send double messages to the last user
 		while True:
 			self.update = json.loads(self.apiRequest("getUpdates", {'offset':'-1'}))
-		try:
-			self.update = self.update["result"][0]
-			self.update_id = self.update["update_id"]
-			self.user_id = self.update["message"]["from"]["id"]
-			self.username = self.update["message"]["from"]["username"]
-			self.first_name = self.update["message"]["from"]["first_name"]
-			self.chat_id = self.update["message"]["chat"]["id"]
-			self.text = self.update["message"]["text"]
-			self.date = self.update["message"]["date"]
-			up = True
-		except:
-			if up:
-				utils.alert("No updates found.")
-				time.sleep(5)
-				up = False
-		if(self.newUpdate()):                   #If there is a new update(new message)
-			if(self.text.startswith("/")):      #If the message starts with /
-				self.parseMsg()
-				self.msgProcessed(self.update_id)   #Add the message, whatever it was, to the processed ones so that it won't be processed again
+			try:
+				self.update = self.update["result"][0]
+				self.update_id = self.update["update_id"]
+				self.user_id = self.update["message"]["from"]["id"]
+				self.username = self.update["message"]["from"]["username"]
+				self.first_name = self.update["message"]["from"]["first_name"]
+				self.chat_id = self.update["message"]["chat"]["id"]
+				self.text = self.update["message"]["text"]
+				self.date = self.update["message"]["date"]
+				up = True
+			except:
+				if up:
+					utils.alert("No updates found.")
+					time.sleep(5)
+					up = False
+			if(self.newUpdate()):                   #If there is a new update(new message)
+				if(self.text.startswith("/")):      #If the message starts with /
+					self.parseMsg()
+					self.msgProcessed(self.update_id)   #Add the message, whatever it was, to the processed ones so that it won't be processed again
 
 
 	#Add the latest update to the processed ones
