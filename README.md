@@ -53,7 +53,7 @@ class PluginName(Plugin):
 
 * Use the "self.chat" and "self.user" dictionaries to access user's and chat infos, look at the chat plugin for more.
 
-* For further examples look at the help.py plugin and the others [here](https://github.com/GooogIe/VarasTG/tree/master/Plugins)
+* For further examples look at the help.py plugin and the others [here](https://github.com/GooogIe/VarasTG/tree/master/plugins)
 
 ***
 # More #
