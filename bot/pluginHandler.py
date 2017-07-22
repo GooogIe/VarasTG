@@ -11,7 +11,7 @@ Github: https://github.com/GooogIe
 #Imports
 from os import listdir
 from os.path import isfile, join
-import sys,json,utils,os,threading
+import sys,json,utils,os,threading,inspect
 
 osslash = ""
 
@@ -88,7 +88,7 @@ class PluginHandler():
         for plugin in self.plugins:
             if plugin.getName() == name:
                 try:
-                    plugin.setInfo(chat,user)
+                    plugin.setInfo(user,chat)
                     return plugin.run(*args)
                 except TypeError:
                 	return "Invalid number of parameters specified."
