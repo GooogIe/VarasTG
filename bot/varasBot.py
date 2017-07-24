@@ -13,7 +13,7 @@ Github: https://github.com/GooogIe
 from modules.pluginHandler import PluginHandler
 from modules.telegramHandler import Telegram
 from modules import logger
-import sys,utils,os,threading
+import sys,os,threading
 from os.path import isfile
 #Disable creation of .pyc
 sys.dont_write_bytecode = True
