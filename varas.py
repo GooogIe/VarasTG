@@ -9,7 +9,7 @@ Last modified: June 2017
 Version: 1.1
 Github: https://github.com/GooogIe and https://github.com/neon-loled/
 """
-from bot import varasBot,utils
+from bot import varasBot
 def main():
     varas = varasBot.Bot()
     varas.startCli()
