@@ -65,4 +65,4 @@ class PluginName(Plugin):
 * Neon/Loled
 
 ### You can find me on:
-* [Telegram](http://www.telegram.me/elgoog)
+* [Telegram](https://t.me/eeeeigoog)
